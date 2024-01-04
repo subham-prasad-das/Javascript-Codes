@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="languages">
+        <li>C</li>
+    </ul>
+</body>
+<script>
+    const ul = document.querySelector('.languages');
+
+    const addlist = (lang) => {
+        const listName = document.createElement('li');
+        listName.innerText = lang;
+        ul.appendChild(listName);
+    }
+    addlist('C++');
+    const newLang = document.querySelectorAll('li')[0];
+    newLang.innerText = 'Javascript';
+    addlist('C');
+
+</script>
+</html>

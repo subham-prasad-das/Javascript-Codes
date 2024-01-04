@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const elem = (lines, color, bgco)=>{
+        const para = document.createElement('span');
+        para.className = 'para';
+        para.innerText = lines;
+        para.style.color = color;
+        para.style.backgroundColor = bgco;
+        document.body.appendChild(para);
+    }
+
+    elem('I am the best in the world', 'blue', 'red');
+    
+</script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show time</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            background-color: #212121;
+        }
+        h1{
+            text-align: center;
+            color: aqua;
+        }
+        .timeBox{
+            padding: 15px;
+            margin: 10px;
+            border: 2px solid grey;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            color: red;
+            font-weight: bold;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <h1>The following box will show the time</h1>
+    </p>
+    <span class="timeBox"></span>
+</body>
+<script>
+    const display = document.querySelector('.timeBox');
+    setInterval((() => {
+        const time = new Date();
+        display.innerHTML = time.toLocaleTimeString();
+    }), 1000);
+</script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="heading">This is a paragraph showing the heading of the web page</p>
+    <p id="time"></p>
+    <button id="button">click to watch the time</button>
+
+    <script>
+        document.getElementById('button').addEventListener('click', function(){
+            let d = new Date();
+            let dH = d.getHours();
+            let dM = d.getMinutes();
+            let dS = d.getSeconds();
+            let time = dH + " : " + dM + " : " + dS;
+            document.getElementById('time').innerHTML = time;
+        });
+        document.getElementById('button').addEventListener('mouseon', function(){
+            alert("The mouse was hovered over the button");
+        });
+    </script>
+</body>
+</html>

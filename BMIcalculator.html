@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <style>
+        /* 
+            To be finalized later, now all the focus is on making javascript projects
+        */
+    </style>
+</head>
+<body>
+    <div class="container">
+        Height: <input type="text" id="height"><br>
+        Weight: <input type="text" id="weight"><br>
+        <input type="text" name="display" id="display" readonly><br><br><br>
+        <button id="button" onclick="calculate()">Check</button>
+    </div>
+</body>
+<script>
+    let calculate = () => {
+        const height = parseFloat(document.getElementById('height').value);
+
+        const weight = parseFloat(document.getElementById('weight').value);
+
+        const display = document.getElementById('display');
+        display.value = Math.round((weight / (height * height)) * 10000);
+    }
+</script> 
+</html>

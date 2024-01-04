@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70vmin;
+        }
+        .buttons{
+            padding: 50px;
+            margin: 5px;
+        }
+        p{
+            font-weight: bold;
+            color: darkmagenta;
+        }
+    </style>
+</head>
+<body>
+    <p>The motive of this project is to change the background color of the document according to the buttons clicked</p>
+    <div class="container">
+        <button class="buttons" id="orangered" style="background-color: orangered;" onclick="changeColor(id);"></button>
+        <button class="buttons" id="white" style="background-color: white;" onclick="changeColor(id);"></button>
+        <button class="buttons" id="blue" style="background-color: blue;" onclick="changeColor(id);"></button>
+        <button class="buttons" id="green" style="background-color: green;" onclick="changeColor(id);"></button>
+    </div>
+</body>
+<script>
+    function changeColor(color){
+        document.body.style.backgroundColor = color;
+    }
+</script>
+</html>
