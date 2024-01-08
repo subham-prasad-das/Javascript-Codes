@@ -27,4 +27,6 @@ const persona = () =>
 console.log(persona());
 
 Here we need to wrap the whole object in side the parenthesis and also inside the braces in order to return it.
+It only be needed to be done while returning objects.
+while not returning objects, giving the outer parenthesis will show error
 */
