@@ -52,19 +52,21 @@ console.log(others); // [2, 3, 4, 5]
 /*
 => Spread Operator can also be used to take arguments of a function
 
-const fun = (...args) => {
-    const [first, ...rest] = args; // the first argument will be stored in 'first' and the remaining elements in 'rest'
-    const [second, ...left] = rest.reverse(); // 'rest' is reversed and the first elelment which is ultimately the last argument came into the function will be stored inside 'second' and the left overs are stored in 'left'.
+*/
+const fun = (...arguments) => {
+    const [first, ...rest] = arguments; // the first argument will be stored in 'first' and the remaining elements in 'rest'
+    const [last, ...left] = rest.reverse(); // 'rest' is reversed and the first elelment which is ultimately the last argument came into the function will be stored inside 'second' and the left overs are stored in 'left'.
+    const [second, ...args] = rest; // As we have reversed the 'rest', 'second' will contain "5"
 
     console.log(first); // 1
+    console.log(last); // 5
     console.log(second); // 5
-    console.log(args.length); // 5
-    console.log(rest.length); // 4
-    console.log(left.length); // 3
+    console.log(rest); // [ 5, 4, 3, 2 ]
+    console.log(left); // [4, 3, 2]
+    console.log(args); // [ 4, 3, 2 ]
 }
 
 fun(1, 2, 3, 4, 5);
-*/
 
 
 /*
