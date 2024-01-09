@@ -29,3 +29,11 @@ console.log(first); // 1
 console.log(second); // 2
 console.log(rest); // [ 3, 4, 5 ]
 */
+
+/**
+For extracting only the third variable, skipping all other --> 
+
+ */
+
+const [,,third,,] = arr;
+console.log(third); // 3
